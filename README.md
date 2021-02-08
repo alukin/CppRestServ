@@ -17,5 +17,5 @@ Boost developemnt package (boost-devel) and CPPRest development package (cppres-
 You also need CMake and, obviously, gcc-c++.
 On Fedora Linux, run:
 
-dnf install boost-devel cpprest-devel cmake gcc-c++
+sudo dnf install boost-devel cpprest-devel cmake gcc-c++
 
