@@ -7,8 +7,10 @@ Main idea is to enable easy REST endpoint creation and simple static conten
 serving in C++ project that use cpprest.
 
 It is about 2 years old and provided here as example of my C++ code. But anyway, feel fre to use it.
-May be better solution today is to use "Beast" library from Boost library, but anyway, I hope this code will be usefull
-as example
+Anyway, I hope this code will be usefull as example of Java-style eay to use REST service library.
+
+If I where writing such kind of library today, I'd use [Boot Beast](https://www.boost.org/doc/libs/1_74_0/libs/beast/doc/html/index.html)
+and [JSON library by Niels Lohmann](https://github.com/nlohmann/json).
 
 ### Requirements
 
