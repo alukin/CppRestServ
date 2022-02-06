@@ -31,70 +31,70 @@ void PipesResource::registerMethods(){
     headers_fn=bind(&PipesResource::precessHeaders,this, placeholders::_1);
 
     reg_map["/"]={
-        GET_m:{
-            inited: true,
-            fn : bind(&PipesResource::doGET_,this,placeholders::_1,placeholders::_2),
-            accepts : "",
-            produces: "application/json"
+        .GET_m = {
+            .inited =  true,
+            .fn =  bind(&PipesResource::doGET_,this,placeholders::_1,placeholders::_2),
+            .accepts =  "",
+            .produces =  "application/json"
         },
-        PUT_m:{
-            inited: true,
-            fn : bind(&PipesResource::doPUT_,this,placeholders::_1,placeholders::_2),
-            accepts : "application/json",
-            produces: "application/json"        
+        .PUT_m = {
+            .inited =  true,
+            .fn =  bind(&PipesResource::doPUT_,this,placeholders::_1,placeholders::_2),
+            .accepts =  "application/json",
+            .produces =  "application/json"
         },
-        POST_m:{
-            inited: false
+        .POST_m = {
+            .inited =  false
         },
-        DELETE_m:{
-            inited: false
+        .DELETE_m = {
+            .inited =  false
         },
-        OPTIONS_m:{
-            inited: false
+        .OPTIONS_m = {
+            .inited =  false
         }
     };
 
     reg_map["/{id}"]={
-        GET_m:{
-            inited: true,
-            fn : bind(&PipesResource::doGET_byId,this,placeholders::_1,placeholders::_2),
-            accepts : "",
-            produces: "application/json"
+        .GET_m = {
+            .inited =  true,
+            .fn =  bind(&PipesResource::doGET_byId,this,placeholders::_1,placeholders::_2),
+            .accepts =  "",
+            .produces =  "application/json"
         },
-        PUT_m:{
-            inited: false
+        .PUT_m = {
+            .inited =  false
         },
-        POST_m:{
-            inited: true,
-            fn : bind(&PipesResource::doPOST_byId,this,placeholders::_1,placeholders::_2),
-            accepts : "application/json",
-            produces: "application/json"        
+        .POST_m = {
+            .inited =  true,
+            .fn =  bind(&PipesResource::doPOST_byId,this,placeholders::_1,placeholders::_2),
+            .accepts =  "application/json",
+            .produces =  "application/json"
         },
-        DELETE_m:{
-            inited: false
+        .DELETE_m = {
+            .inited =  false
         },
-        OPTIONS_m:{
-            inited: false
+        .OPTIONS_m = {
+            .inited =  false
         }    
     };
     reg_map["/{pipeId}/{pipeOp}"]={
-        GET_m:{
-            inited: false
+        .GET_m = {
+            .inited =  false
         },
-        PUT_m:{
-            inited: false
+        .PUT_m = {
+            .inited =  false
         },
-        POST_m:{
-            inited: true,
-            fn : bind(&PipesResource::doPOST_PpipeId_PpipeOp,this,placeholders::_1,placeholders::_2),
-            accepts : "application/json",
-            produces: "application/json"        
+        .POST_m = {
+            .inited =  true,
+            .fn =  bind(&PipesResource::doPOST_PpipeId_PpipeOp,this,placeholders::_1,placeholders::_2),
+            .accepts =  "application/json",
+            .produces =  "application/json"
         },
-        DELETE_m:{
-            inited: false
+        .DELETE_m = {
+            .inited =  false
         },
-        OPTIONS_m:{
-            inited: false
+        .OPTIONS_m = {
+            .inited =  false
         }    
     };    
 }
